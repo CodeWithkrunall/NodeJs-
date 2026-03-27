@@ -20,6 +20,18 @@ app.delete('/delete',(req, res) =>{
 res.send('this is delete')
 });
 
+app.get('/contact', (req, res) =>{
+    res.send("this is contant")
+});
+
+app.get('/login', (req, res) => {
+    res.send('this is login page')
+});
+
+app.get('/product', (req,res) =>{
+    res.send('this is product page')
+});
+
 
 app.listen(3000, () =>{
     console.log('server running on port 3000 ')
