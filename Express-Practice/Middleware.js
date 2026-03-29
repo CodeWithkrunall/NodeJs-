@@ -24,4 +24,6 @@ const checkUser = (req, res, next) =>{
             res.send('Login reqired')
          }
 };
-app.get()
+app.get('./dashboard', checkUser, (req,res) =>{
+    res.send('welcome dashboard')
+});
