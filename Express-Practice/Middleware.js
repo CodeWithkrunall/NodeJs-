@@ -1,15 +1,15 @@
-// const express = require('express');
-// const app = express();
+const express = require('express');
+const app = express();
 
-// //Middleware
-// app.use((req, res, next) => {
-//     console.log('Middleware chala');
-//     next(); // very importent
-// });
-// app.get('/', (req, res) =>{
-//     res.send('Home page')
-// });
-// app.listen(3000);
+//Middleware
+app.use((req, res, next) => {
+    console.log('Middleware chala');
+    next(); // very importent
+});
+app.get('/', (req, res) =>{
+    res.send('Home page')
+});
+app.listen(3000);
 
 
 
@@ -26,4 +26,23 @@ const checkUser = (req, res, next) =>{
 };
 app.get('./dashboard', checkUser, (req,res) =>{
     res.send('welcome dashboard')
+});
+
+
+//Practice
+
+const checkAge =(req, res, next) => {
+
+    const isAge = 20;
+
+    if(isAge >= 18){
+        next();
+    }else{
+        res.send('age is invalid');
+    }
+
+}
+
+app.get('/profile', checkAge, (req, res) =>{
+    res.send('welcome profile')
 });
