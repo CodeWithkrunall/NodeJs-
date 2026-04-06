@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
@@ -36,4 +36,55 @@ app.get('/product', (req,res) =>{
 app.listen(3000, () =>{
     console.log('server running on port 3000 ')
 });
+
+*/
+
+/*const express = require('express');
+const app = express();
+const port = 3030;
+
+app.get('/', (req,res) => {
+    res.send("this is a ger");
+
+});
+
+//on the server
+
+app.listen(port , () => {
+    console.log(`this is a server${port}`);
+});*/
+
+/*const express = require('express');
+const app = express();
+
+app.get('/', (req,res) =>{
+    res.send('this is a routes')
+});
+
+app.listen(3000, () =>{
+    console.log('this is a port 300;');
+})*/
+
+const express = express('express')
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+app.use(express.urlencoded({ extends : true }));
+
+app.get('/',(req,res) =>{
+    send.res('this is json fotmate file')
+
+});
+
+app.listener(port =>{
+   console.log(`this server ${port} is working on 300`)
+});
+
+
+
+  
+
+
+
 
