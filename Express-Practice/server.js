@@ -65,6 +65,7 @@ app.listen(3000, () =>{
     console.log('this is a port 300;');
 })*/
 
+/*
 const express = express('express')
 const app = express();
 const port = 3000;
@@ -78,9 +79,26 @@ app.get('/',(req,res) =>{
 });
 
 app.listener(port =>{
-   console.log(`this server ${port} is working on 300`)
+   console.log(`this server ${port} `)
 });
 
+*/
+
+//route parameter 
+app.get('/user/:id', (req,res)=>{
+    console.log(req.params.id);
+});
+
+//query string ---> users ? role = admin
+
+app.get('/users', (req,res)=>{
+    console.log(req.query.role);
+});
+
+//request body  --> post with JSON
+app.post('/users', (req,res) => {
+    console.log(req.body);
+});
 
 
   
