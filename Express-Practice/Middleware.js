@@ -46,3 +46,15 @@ const checkAge =(req, res, next) => {
 app.get('/profile', checkAge, (req, res) =>{
     res.send('welcome profile')
 });
+
+
+
+
+//Logger Middleware Practice
+
+app.user((req,res,next)=>{
+    const time = new Date().toISOString();
+    console.log(`[${time}] ${req.method} ${req.url}`);
+    next();
+
+});
