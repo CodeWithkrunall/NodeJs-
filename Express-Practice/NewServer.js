@@ -13,11 +13,11 @@ app.get('/user/:username', (req, res)=>{
     res.send(`welcome ${Krunal}`);
 });
 
-//quiry   // search?keyword=express
-app.get('/search', (req, res)=>{
+//query   // search?keyword=express
+app.get('/search',(req,res)=>{
     const keyword = req.query.keyword
-    res.send( ` search .... keyword is ${keyword}` )
-}
+    res.send(`searching ${keyword}`)
+});
 
 app.listen(port , () =>{
     console.log(` this server run on ${port}`)
