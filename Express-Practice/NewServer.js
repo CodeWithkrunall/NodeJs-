@@ -1,4 +1,5 @@
 const express = require('express');
+const { userHandleName } = require('./export');
 const app = express();
 
 const port = 3000;
@@ -18,6 +19,8 @@ app.get('/search',(req,res)=>{
     const keyword = req.query.keyword
     res.send(`searching ${keyword}`)
 });
+
+app.get('/profile',userHandleName )
 
 app.listen(port , () =>{
     console.log(` this server run on ${port}`)
