@@ -20,9 +20,9 @@
 // })
 
 import {MongoClient} from "mongodb"
-import dns from "dns"
+// import dns from "dns"
 
-dns.setServers(["1.1.1.1", "8.8.8.8"]);
+// dns.setServers(["1.1.1.1", "8.8.8.8"]);
 //mongodb atlas connection string
 
 const url = "mongodb+srv://KrunalStack:kru123@cluster0.o1bonfu.mongodb.net/database?appName=Cluster0"
