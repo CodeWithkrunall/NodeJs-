@@ -2,7 +2,7 @@
   "name": "express-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "MongoDb.js",
+  "main": "MongoDbc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -10,5 +10,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "mongoose": "^9.5.0"
+  }
 }
